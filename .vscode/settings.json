@@ -8,5 +8,6 @@
   "files.trimFinalNewlines": true,
 
   "jest.autoEnable": true,
-  "jest.enableCodeLens": true
+  "jest.enableCodeLens": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
