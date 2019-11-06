@@ -9,5 +9,9 @@
 
   "editor.formatOnSave": true,
   "prettier.requireConfig": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "editor.fontSize": 15,
+  "editor.fontFamily": "Fira Code, Fira Mono, monospace",
+  "editor.lineHeight": 0
 }
