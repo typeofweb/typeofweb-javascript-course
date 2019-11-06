@@ -1,7 +1,4 @@
 {
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "editor.trimAutoWhitespace": true,
   "files.trimTrailingWhitespace": true,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
@@ -9,5 +6,8 @@
 
   "jest.autoEnable": true,
   "jest.enableCodeLens": true,
+
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
