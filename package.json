@@ -1,6 +1,7 @@
 {
   "name": "typeofweb-javascript-course",
   "version": "1.0.0",
+  "private": true,
   "description": "Repozytorium z materiałami szkoleniowymi JavaScript",
   "scripts": {
     "test": "jest"
@@ -9,13 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/wojtiku/typeofweb-javascript-course.git"
   },
-  "author": "Szkolenia TypeOfWeb - Michał Miszczyszyn, Wojciech Urbański",
-  "license": "ISC",
+  "author": "Szkolenia Type of Web - Michał Miszczyszyn, Wojciech Urbański",
+  "license": "All rights reserved",
   "bugs": {
     "url": "https://github.com/wojtiku/typeofweb-javascript-course/issues"
   },
   "homepage": "https://typeofweb.com/szkolenia/",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "24.9.0"
   }
 }
