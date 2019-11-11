@@ -1,4 +1,4 @@
-describe('Ćwiczenie 3 - Quiz o podstawach', () => {
+describe('Ćwiczenie 2 - Quiz o podstawach', () => {
   it('Jakie aplikacje można pisać w JavaScripcie?', () => {
     const answers = {
       a: 'Przeglądarkowe',
