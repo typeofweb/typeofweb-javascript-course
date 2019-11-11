@@ -17,6 +17,7 @@
   },
   "homepage": "https://typeofweb.com/szkolenia/",
   "devDependencies": {
+    "@types/jest": "24.0.22",
     "jest": "24.9.0"
   }
 }
