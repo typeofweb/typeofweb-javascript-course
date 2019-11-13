@@ -33,7 +33,7 @@ describe('Ćwiczenie 6 - Typy proste', () => {
       expect(`Witaj, ${name}`).toEqual('Witaj, świecie!');
     });
 
-    it(`Użyj trzech stałej i dowolnej notacji`, () => {
+    it(`Użyj trzech stałych i dowolnej notacji`, () => {
       const name1 = 'Type';
       const name2 = 'of';
       const name3 = 'Web';
