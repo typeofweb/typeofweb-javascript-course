@@ -90,7 +90,7 @@ describe('Ćwiczenie 8', () => {
         return answer;
       }
 
-      expect(solution(1)).toEqual('Niemowle');
+      expect(solution(1)).toEqual('Niemowlę');
       expect(solution(10)).toEqual('Dziecko');
       expect(solution(15)).toEqual('Młodzież');
       expect(solution(18)).toEqual('Pełnoletni');
