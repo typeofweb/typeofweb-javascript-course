@@ -27,7 +27,7 @@ describe('Ćwiczenie 13', () => {
 
   it(`
   Mamy klasę "Player", której instancje posiadają 5 metod: "up", "right", "down", "left" i "log"
-  Pierwsze cztery odpowiadają one za wirtualny ruch postaci.
+  Pierwsze cztery odpowiadają za wirtualny ruch postaci.
   Pozycja gracza jest zapamiętywana i można być zwrócona przy pomocy metody "log".
   Zaimplementuj klasę "Player".
   `, () => {
