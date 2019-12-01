@@ -1,6 +1,32 @@
 describe('Ćwiczenie 13', () => {
+  it(`Zastąp funkcję w prototypie tak, zamiast "hello" wyświetlany był napis "cześć". Nie modyfikuj klasy!`, () => {
+    const spy = spyOn(console, 'log');
+
+    class X {
+      sayHello() {
+        console.log('hello');
+      }
+    }
+
+    const a = new X();
+    const b = new X();
+    const c = new X();
+
+    // 👇
+
+    // ☝️
+
+    a.sayHello();
+    b.sayHello();
+    c.sayHello();
+    expect(spy).toHaveBeenCalledTimes(3);
+    expect(spy).toHaveBeenNthCalledWith(1, 'cześć');
+    expect(spy).toHaveBeenNthCalledWith(2, 'cześć');
+    expect(spy).toHaveBeenNthCalledWith(3, 'cześć');
+  });
+
   it(`
-  Mamy klasę "Player", której instnacje posiadają 5 metod: "up", "right", "down", "left" i "log"
+  Mamy klasę "Player", której instancje posiadają 5 metod: "up", "right", "down", "left" i "log"
   Pierwsze cztery odpowiadają one za wirtualny ruch postaci.
   Pozycja gracza jest zapamiętywana i można być zwrócona przy pomocy metody "log".
   Zaimplementuj klasę "Player".
