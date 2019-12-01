@@ -1,5 +1,5 @@
 const host = window;
-describe('Ćwiczenie 12 - this', () => {
+describe('Ćwiczenie 14 - this', () => {
   it(`Zmień implementację solution tak, aby jego kontekstem był undefined`, () => {
     function solution() {
       return this;
