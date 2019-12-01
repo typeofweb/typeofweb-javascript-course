@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 16</title>
+</head>
+<body>
+  <label>Podaj liczbę: <input id="input" type="number"></label>
+  <label>Wybierz jednostkę: <select id="unit"><option value="cm" selected>cm</option><option value="in">in</option></select>
+  <label>Wynik w mm: <output id="output"></output></label>
+
+  <script>
+    /**
+     * Stwórz aplikację w JavaScripcie i HTML.
+     * Aplikacja po uruchomieniu ma wyświetlać formularz, który umożliwia
+     * przeliczanie jednostek długości. Użytkownik ma możliwość wpisania
+     * liczby w polu oraz wybrania jednostki (centrymetr lub cal).
+     * Wynikiem będzie podana wartość przeliczona na milimetry z dokładnością
+     * do jednego miejsca po przecinku
+     *
+     * ## Założenia i wymagania:
+     * - użytkownik może wpisywać liczbę w pole
+     * - w trakcie wpisywania aplikacja ma automatycznie na bieżąco przeliczać
+     *   i wyświetlać wynik – bez konieczności np. klikania w przycisk
+     * - ponadto, użytkownik może dokonać wyboru dwóch jednostek: centymetr lub cal
+     */
+
+    // 👇
+      function convert(value, unit) {
+        if (unit === 'cm') {
+          return value * 10;
+        } else {
+          return value * 25.4;
+        }
+      }
+      function update() {
+        const input = document.querySelector('#input').value;
+        const unit = document.querySelector('#unit').value;
+        const result = convert(input, unit);
+
+        document.querySelector('#output').value = result.toFixed(1);
+      }
+
+      document.querySelector('#input').addEventListener('input', update);
+      document.querySelector('#unit').addEventListener('change', update);
+    // ☝️
+  </script>
+</body>
+</html>
