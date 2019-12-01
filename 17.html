@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 17</title>
+  </head>
+  <body>
+    <button id="send_event">Wyślij zdarzenie</button>
+    <button id="add_observer">Dodaj nasłuchującego</button>
+
+    <script>
+      /**
+       * Na stronie widoczne są 2 przyciski:
+       * - Wyślij zdarzenie
+       * - Dodaj nasłuchującego
+       * Po kliknięciu w pierwszy z nich ma powodować, że każdy dodany nasłuchujący wyświetli komunikat w przeglądarce ("alert").
+       * Kliknięcie w drugi z nich ma powodować dodanie nowego nasłuchującego.
+       * Implementacja *musi* opierać się o klasę Observer poniżej.
+       *
+       * Oczekiwane działanie:
+       * 1. Klikam "Wyślij zdarzenie". Nic się nie dzieje (nie ma nasłuchujących).
+       * 2. Klikam "Dodaj nasłuchującego".
+       * 3. Klikam "Wyślij zdarzenie". Pojawia się jeden komunikat.
+       * 4. Klikam jeszcze dwa razy "Dodaj nasłuchującego".
+       * 5. Klikam "Wyślij zdarzenie". Pojawiaaj się trzy komunikaty.
+       */
+
+      class Observer {
+        constructor() {
+          this.observers = [];
+        }
+
+        addObserver(observer) {
+          this.observers.push(observer);
+        }
+
+        notify(data) {
+          this.observers.forEach(observer => {
+            observer(data);
+          });
+        }
+      }
+
+      // 👇
+
+      // ☝️
+    </script>
+  </body>
+</html>
