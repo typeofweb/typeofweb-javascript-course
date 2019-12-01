@@ -4,7 +4,8 @@
   "private": true,
   "description": "Repozytorium z materiałami szkoleniowymi JavaScript",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "serve": "http-server"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
     ]
+  },
+  "dependencies": {
+    "http-server": "0.12.0"
   }
 }

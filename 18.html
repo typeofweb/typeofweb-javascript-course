@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadanie 18</title>
+  </head>
+  <body>
+    <button id="send_event">Wyślij zdarzenie</button>
+    <button id="add_observer">Dodaj nasłuchującego</button>
+
+    <script type="module">
+      /**
+       * Wyeksportuj klasę Observer z pliku observer.js
+       * Następnie, zaimportuj ją tutaj tak, aby poniższy kod działał.
+       */
+
+      // 👇
+      import { Observer } from './observer.js';
+      // ☝️
+
+      const observer = new Observer();
+      document
+        .querySelector('#send_event')
+        .addEventListener('click', () => observer.notify(Date.now()));
+      document
+        .querySelector('#add_observer')
+        .addEventListener('click', () =>
+          observer.addObserver(data => alert(data)),
+        );
+    </script>
+  </body>
+</html>
