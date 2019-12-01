@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zadanie 16.2</title>
+</head>
+<body>
+  <label>Elementy:<br>
+<textarea id="input" cols="60" rows="10">
+pierwszy
+<strong>drugi</strong>
+<em>trzeci</em>
+</textarea>
+  </label>
+
+  <h3>Lista:</h3>
+  <ul id="list"></ul>
+
+  <script>
+    /**
+     * Napisz funkcję handleClick, która po kliknięciu w element listy wyświetli
+     * jego tekst za pomocą funkcji alert.
+     *
+     * ## Założenia i wymagania:
+     * - użytkownik może wpisywać w pole dowolny tekst, równie HTML
+     * - alert powinien zostać wyświetlony również jeśli użytkownik kliknie
+     *   w jakiś element HTML wewnątrz elementu listy
+     */
+
+    function handleClick(e) {
+      // 👇
+      if (e.target.closest("li")) alert(e.target.textContent)
+      // ☝️
+    }
+
+    const listElement = document.querySelector('#list');
+    listElement.addEventListener("click", handleClick);
+
+    const input = document.querySelector('#input');
+    input.addEventListener("input", function (e) {
+      listElement.innerHTML = this.value.trim().split("\n").map((line, index) => `<li>${line}</li>`).join("");
+    });
+    input.dispatchEvent(new Event('input'));
+  </script>
+</body>
+</html>
