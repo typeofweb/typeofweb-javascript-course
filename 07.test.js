@@ -107,7 +107,7 @@ describe('Ćwiczenie 7', () => {
       expect(answer).toEqual(false);
     });
     it('11', () => {
-      `Napraw poniższy kod`;
+      `Napraw poniższy kod używając Object.is.`;
       const a = 1;
       const b = '1';
 
