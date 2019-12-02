@@ -1,13 +1,15 @@
 const host = window;
 describe('Ćwiczenie 14 - this', () => {
-  it(`Zmień implementację solution tak, aby jego kontekstem był undefined`, () => {
+  {}  it('1', () => {
+    `Zmień implementację solution tak, aby jego kontekstem był undefined`;
     function solution() {
       return this;
     }
     expect(solution()).toBe(undefined);
   });
 
-  it(`Używając wywołania metody wywołaj foo tak, aby zwróciła otherO (nie zmieniaj implementacji foo)`, () => {
+  it('2', () => {
+    `Używając wywołania metody wywołaj foo tak, aby zwróciła otherO (nie zmieniaj implementacji foo)`;
     const o = {
       a: 'o object',
       foo: function () {
@@ -20,7 +22,8 @@ describe('Ćwiczenie 14 - this', () => {
     expect(o.foo()).toBe(otherO);
   });
 
-  it(`Zmień sposób przekazania o.foo do setTimeout tak, aby kontekst pozostał taki jak się spodziewasz`, () => {
+  it('3', () => {
+    `Zmień sposób przekazania o.foo do setTimeout tak, aby kontekst pozostał taki jak się spodziewasz`;
     jest.useFakeTimers();
     const tester = jest.fn();
 
@@ -36,7 +39,8 @@ describe('Ćwiczenie 14 - this', () => {
     expect(tester).toBeCalledWith(o);
   });
 
-  it(`Napraw poniższy kod. Są przynajmniej 3 możliwe rozwiązania.`, () => {
+  it('4', () => {
+    `Napraw poniższy kod. Są przynajmniej 3 możliwe rozwiązania.`;
     const user = {
       id: 1,
       firstName: 'Kasia',
@@ -52,12 +56,13 @@ describe('Ćwiczenie 14 - this', () => {
     expect(result).toEqual(`My name is Kasia and I'm 22.`);
   });
 
-  it(`
-  Mamy obiekt "player", który posiada 5 metod: "up", "right", "down", "left" i "log"
-  Pierwsze cztery odpowiadają one za wirtualny ruch postaci.
-  Pozycja gracza jest zapamiętywana i można być zwrócona przy pomocy metody "log".
-  Zaimplementuj obiekt "player".
-  `, () => {
+  it('5', () => {
+    `
+    Mamy obiekt "player", który posiada 5 metod: "up", "right", "down", "left" i "log"
+    Pierwsze cztery odpowiadają one za wirtualny ruch postaci.
+    Pozycja gracza jest zapamiętywana i można być zwrócona przy pomocy metody "log".
+    Zaimplementuj obiekt "player".
+    `;
     const player = {
       // 👇
 
@@ -72,7 +77,8 @@ describe('Ćwiczenie 14 - this', () => {
     expect(player.right().log()).toEqual({ x: -1, y: 4 });
   });
 
-  it(`Korzystając z poprzedniego zadania, stwórz fabrykę obiektów "playerFactory", dzięki której nie będzie możliwy bezpośredni dostęp do pól "x" i "y"`, () => {
+  it('6', () => {
+    `Korzystając z poprzedniego zadania, stwórz fabrykę obiektów "playerFactory", dzięki której nie będzie możliwy bezpośredni dostęp do pól "x" i "y"`;
     // 👇
 
     // ☝️

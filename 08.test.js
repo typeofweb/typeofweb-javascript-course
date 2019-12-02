@@ -1,6 +1,7 @@
 describe('Ćwiczenie 8', () => {
   describe('quiz o operatorach logicznych', () => {
-    it(`OR`, () => {
+    it('1', () => {
+      `OR`;
       const value = null || 1 || undefined;
       const answers = {
         a: 1,
@@ -14,7 +15,8 @@ describe('Ćwiczenie 8', () => {
       expect('').toBeCorrectAnswer('def1ab2');
     });
 
-    it(`AND`, () => {
+    it('2', () => {
+      `AND`;
       const value = 2 && null && 3;
       const answers = {
         a: 2,
@@ -28,7 +30,8 @@ describe('Ćwiczenie 8', () => {
       expect('').toBeCorrectAnswer('d5cefac');
     });
 
-    it(`OR + AND`, () => {
+    it('3', () => {
+      `OR + AND`;
       const value = null || (42 && 420) || 123;
       const answers = {
         a: null,
@@ -44,7 +47,8 @@ describe('Ćwiczenie 8', () => {
   });
 
   describe('Warunki - zadania', () => {
-    it(`Napisz warunek, aby sprawdzić, czy liczba jest mniejsza od 3 lub większa od 5`, () => {
+    it('4', () => {
+      `Napisz warunek, aby sprawdzić, czy liczba jest mniejsza od 3 lub większa od 5`;
       function solution(num) {
         return false; // 👈
       }
@@ -58,7 +62,8 @@ describe('Ćwiczenie 8', () => {
       expect(solution(7)).toBe(true);
     });
 
-    it(`Napisz warunek, aby sprawdzić, czy podana liczba jest oceną szkolną`, () => {
+    it('5', () => {
+      `Napisz warunek, aby sprawdzić, czy podana liczba jest oceną szkolną`;
       function solution(num) {
         return false; // 👈
       }
@@ -73,7 +78,8 @@ describe('Ćwiczenie 8', () => {
       expect(solution(7)).toBe(false);
     });
 
-    it(`Napraw poniższy kod używając operatora &&`, () => {
+    it('6', () => {
+      `Napraw poniższy kod używając operatora &&`;
       function solution(obj) {
         return obj.a.b.c; // 👈
       }
@@ -84,7 +90,8 @@ describe('Ćwiczenie 8', () => {
       expect(solution({})).toBe(undefined);
     });
 
-    it(`Zwróć poprawną wiadomość używając zagnieżdżonych operatorów trójargumentowych`, () => {
+    it('7', () => {
+      `Zwróć poprawną wiadomość używając zagnieżdżonych operatorów trójargumentowych`;
       function solution(age) {
         const answer = age < 0 ? '?' : '!'; // 👈
         return answer;
@@ -94,15 +101,16 @@ describe('Ćwiczenie 8', () => {
       expect(solution(10)).toEqual('Dziecko');
       expect(solution(15)).toEqual('Młodzież');
       expect(solution(18)).toEqual('Pełnoletni');
-    })
+    });
 
-    it(`
-    Napisz warunki potrzebne do przeprowadzenia procesu logowania zgodnie ze schematem:
-    1. Poniższe ma zastosowanie tylko, jeśli dany endpoint wymaga logowania.
-    2. Sprawdź, czy jest ciastko.
-    3. Sprawdź, czy token jest ważny.
-    4. Jeśli zasób ma pole userId, to sprawdź, czy użytkownik jest administratorem lub resource.userId równa się userId.
-    `, () => {
+    it('8', () => {
+      `
+      Napisz warunki potrzebne do przeprowadzenia procesu logowania zgodnie ze schematem:
+      1. Poniższe ma zastosowanie tylko, jeśli dany endpoint wymaga logowania.
+      2. Sprawdź, czy jest ciastko.
+      3. Sprawdź, czy token jest ważny.
+      4. Jeśli zasób ma pole userId, to sprawdź, czy użytkownik jest administratorem lub resource.userId równa się userId.
+      `;
       function authFlow(
         routeRequiresLogin,
         hasCookie,
@@ -134,10 +142,11 @@ describe('Ćwiczenie 8', () => {
   });
 
   describe('quiz o pętlach', () => {
-    it(`
+    it('9', () => {
+      `
     pętla while
     Ile wynosi "i" po zakończeniu pętli?
-    `, () => {
+    `;
       let i = 3;
 
       while (i) {
@@ -155,7 +164,8 @@ describe('Ćwiczenie 8', () => {
       //     👇 tutaj
       expect('').toBeCorrectAnswer('da3bcad');
     });
-    it(`Ile razy wykona się pętla?`, () => {
+    it('10', () => {
+      `Ile razy wykona się pętla?`;
       let i = 3;
       do {
         console.log(i);
@@ -172,7 +182,8 @@ describe('Ćwiczenie 8', () => {
       //     👇 tutaj
       expect('').toBeCorrectAnswer('abcd3ca');
     });
-    it(`Ile razy wykona się pętla?`, () => {
+    it('11', () => {
+      `Ile razy wykona się pętla?`;
       let i = 3;
       do {
         console.log(i);
@@ -192,7 +203,7 @@ describe('Ćwiczenie 8', () => {
   });
 
   describe('Pętle i switch - zadania', () => {
-    it('Używając pętli, wypisz liczby od 3 do 11', () => {
+    it('12 Używając pętli, wypisz liczby od 3 do 11', () => {
       spyOn(console, 'log');
       // użyj console.log
       // 👇
@@ -211,7 +222,7 @@ describe('Ćwiczenie 8', () => {
       expect(console.log).toHaveBeenNthCalledWith(9, 11);
     });
 
-    it('Zamień poniższą pętlę do…while na for', () => {
+    it('13 Zamień poniższą pętlę do…while na for', () => {
       spyOn(console, 'log');
 
       // 👇
@@ -240,7 +251,7 @@ describe('Ćwiczenie 8', () => {
       expect(console.log).toHaveBeenNthCalledWith(16, -3);
     });
 
-    it('Wypisz liczby parzyste od 1 do 100 w pętli', () => {
+    it('14 Wypisz liczby parzyste od 1 do 100 w pętli', () => {
       spyOn(console, 'log');
 
       // 👇
@@ -251,7 +262,7 @@ describe('Ćwiczenie 8', () => {
       for (let i = 1; i <= 49; ++i) expect(console.log).toHaveBeenNthCalledWith(i, i + i);
     })
 
-    it('Zamień poniższy kod na switch', () => {
+    it('15 Zamień poniższy kod na switch', () => {
       function solution(x) {
         // 👇
         if (x === 1) {
@@ -276,7 +287,7 @@ describe('Ćwiczenie 8', () => {
       expect(solution(5)).toEqual('ERROR');
     });
 
-    it('Zamień poniższy kod na if…else', () => {
+    it('16 Zamień poniższy kod na if…else', () => {
       function solution(month) {
         // 👇
         switch (month) {
@@ -310,5 +321,5 @@ describe('Ćwiczenie 8', () => {
       expect(solution('Nov')).toEqual('Cold');
       expect(solution('Dev')).toEqual('Cold');
     });
-  })
+  });
 });

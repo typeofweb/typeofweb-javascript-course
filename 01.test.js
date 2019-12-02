@@ -1,8 +1,6 @@
 describe('Ćwiczenie 1 - Hello, world!', () => {
   function solution() {
     // 👇 tutaj wstaw rozwiązanie zadania 1
-    //
-    //
     // ☝️
   }
 

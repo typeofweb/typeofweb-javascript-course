@@ -1,30 +1,33 @@
 describe('Ćwiczenie 5 - Zakresy, hoisting i TDZ', () => {
-  it(`
-  Zmień *tylko* sposób deklaracji zmiennej value,
-  aby wartość była widoczna poza blokiem
-  `, () => {
+  it('1', () => {
+    `
+    Zmień *tylko* sposób deklaracji zmiennej value,
+    aby wartość była widoczna poza blokiem
+  `;
     if (true) {
-      let value = 123;
+      let value = 123; // 👈
     }
     expect(value).toEqual(123);
   });
 
-  it(`
-  Zmień *tylko* sposób deklaracji zmiennej x,
-  aby niemożliwe było odczytanie zmiennej przed jej deklaracją
-  `, () => {
+  it('2', () => {
+    `
+    Zmień *tylko* sposób deklaracji zmiennej x,
+    aby niemożliwe było odczytanie zmiennej przed jej deklaracją
+    `;
     function solution() {
       console.log(x);
-      var x = 42;
+      var x = 42; // 👈
     }
     expect(() => solution()).toThrow();
   });
 
-  it(`Zmień nazwę jednej ze zmiennych, aby pozbyć się buga`, () => {
+  it('3', () => {
+    `Zmień nazwę jednej ze zmiennych, aby pozbyć się buga`;
     var path = require('path');
     function solution() {
       if (true) {
-        var path = './';
+        var path = './'; // 👈
       }
       path.relative('./', '..');
     }
@@ -32,7 +35,8 @@ describe('Ćwiczenie 5 - Zakresy, hoisting i TDZ', () => {
     expect(() => solution()).not.toThrowError();
   });
 
-  it(`Napraw buga w kodzie`, () => {
+  it('4', () => {
+    `Napraw buga w kodzie`;
     jest.useFakeTimers();
 
     const solution = jest.fn();

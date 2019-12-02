@@ -1,5 +1,6 @@
 describe('Ćwiczenie 20', () => {
-  it(`Napisz funkcję "countLetters", która zlicza wystąpienia każdej litery w tekście. Użyj Map.`, () => {
+  it('1', () => {
+    `Napisz funkcję "countLetters", która zlicza wystąpienia każdej litery w tekście. Użyj Map.`;
     // 👇
 
     // ☝️
@@ -9,7 +10,8 @@ describe('Ćwiczenie 20', () => {
     expect([...countLetters("abczzy")]).toEqual([['a', 1], ['b', 1], ['c', 1], ['z', 2], ['y', 1]]);
   });
 
-  it(`Napisz funkcję "unique", która zwraca tablicę bez powtarzających się wartości. Użyj Set.`, () => {
+  it('2', () => {
+    `Napisz funkcję "unique", która zwraca tablicę bez powtarzających się wartości. Użyj Set.`;
     // 👇
 
     // ☝️
@@ -20,28 +22,16 @@ describe('Ćwiczenie 20', () => {
     expect(unique([1, 2, 2, 2, 3, 3, 2, 3, 2, 3, 2, 3, 5])).toEqual([1, 2, 3, 5]);
   });
 
-  it(`
+  it('3', () => {
+    `
     Stwórz Proxy, które automatycznie wywoła funkcję "render",
     gdy zajdą jakiekolwiek zmiany w obiekcie "state".
     Nie wywołuj niepotrzebnie "render", gdy dane się nie zmieniają.
-  `, () => {
+    `;
     const render = jest.fn();
 
     // 👇
-    const stateProxyConfig = {
-      set(obj, key, val) {
-        if (obj[key] !== val) {
-          obj[key] = val;
-          render(obj);
-        }
-      },
-      deleteProperty(obj, key) {
-        if (key in obj) {
-          delete obj[key];
-          render(obj);
-        }
-      }
-    };
+
     // ☝️
 
     const state = new Proxy({}, stateProxyConfig);

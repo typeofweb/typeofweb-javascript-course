@@ -1,6 +1,7 @@
 describe('Ćwiczenie 10', () => {
   describe('quiz o tablicach', () => {
-    it(`Przypisywanie przez referencję: Co zawiera "tablica1"?`, () => {
+    it('1', () => {
+      `Przypisywanie przez referencję: Co zawiera "tablica1"?`;
       const tablica1 = ['a', 'b', 'c'];
       const tablica2 = tablica1;
       tablica2.push(123);
@@ -17,7 +18,8 @@ describe('Ćwiczenie 10', () => {
   });
 
   describe('Zadania', () => {
-    it(`Zaimplementuj funkcję "getLastElement", która zwraca ostatni element tablicy`, () => {
+    it('2', () => {
+      `Zaimplementuj funkcję "getLastElement", która zwraca ostatni element tablicy`;
       // 👇
 
       // ☝️
@@ -28,7 +30,8 @@ describe('Ćwiczenie 10', () => {
       expect(getLastElement([1, 2, 3, 4, 'dddd'])).toEqual('dddd');
     });
 
-    it(`Napisz funkcję "sum", która zsumuje wszystkie podane argumenty`, () => {
+    it('3', () => {
+      `Napisz funkcję "sum", która zsumuje wszystkie podane argumenty`;
       // 👇
 
       // ☝️
@@ -39,7 +42,8 @@ describe('Ćwiczenie 10', () => {
       expect(sum(1, 15, 20, 25)).toEqual(61);
     });
 
-    it(`Napisz funkcję "getNaturalNumbers", która zwróci tablicę o podaje odługości z kolejnymi liczbami naturalnymi`, () => {
+    it('4', () => {
+      `Napisz funkcję "getNaturalNumbers", która zwróci tablicę o podaje odługości z kolejnymi liczbami naturalnymi`;
       // 👇
 
       // ☝️
@@ -49,7 +53,8 @@ describe('Ćwiczenie 10', () => {
       expect(getNaturalNumbers(5)).toEqual([1, 2, 3, 4, 5]);
     });
 
-    it(`Napisz funkcję "max", która zwraca największy element z tablicy`, () => {
+    it('5', () => {
+      `Napisz funkcję "max", która zwraca największy element z tablicy`;
       // 👇
 
       // ☝️
@@ -60,7 +65,8 @@ describe('Ćwiczenie 10', () => {
       expect(max([-10, -2])).toEqual(-2);
     });
 
-    it(`Napisz funkcję "removeElement", która usuwa podany element z tablicy`, () => {
+    it('6', () => {
+      `Napisz funkcję "removeElement", która usuwa podany element z tablicy`;
       // 👇
 
       // ☝️
@@ -84,7 +90,8 @@ describe('Ćwiczenie 10', () => {
       expect(arr).toEqual(['d', 'f']);
     });
 
-    it(`Napisz funkcję "findUserById", która znajduje użytkownika w tablicy po ID`, () => {
+    it('7', () => {
+      `Napisz funkcję "findUserById", która znajduje użytkownika w tablicy po ID`;
       // 👇
 
       // ☝️
@@ -100,7 +107,8 @@ describe('Ćwiczenie 10', () => {
       expect(findUserById(4, [...users])).toEqual(undefined);
     });
 
-    it(`Napisz funkcję "getUserIds", która bierze tablicę użytkowników i zwraca tablicę ich ID. Użyj "map".`, () => {
+    it('8', () => {
+      `Napisz funkcję "getUserIds", która bierze tablicę użytkowników i zwraca tablicę ich ID. Użyj "map".`;
       // 👇
 
       // ☝️
@@ -119,7 +127,8 @@ describe('Ćwiczenie 10', () => {
       ])).toEqual([]);
     });
 
-    it(`Napisz funkcję "sumWithReduce", która zsumuje wszystkie elementy tablicy. Użyj "reduce".`, () => {
+    it('9', () => {
+      `Napisz funkcję "sumWithReduce", która zsumuje wszystkie elementy tablicy. Użyj "reduce".`;
       // 👇
 
       // ☝️
@@ -130,7 +139,8 @@ describe('Ćwiczenie 10', () => {
       expect(sumWithReduce([1])).toEqual(1);
     });
 
-    it(`Napisz funkcję "map", która zmapuje elementy w tablicy. Użyj "reduce".`, () => {
+    it('10', () => {
+      `Napisz funkcję "map", która zmapuje elementy w tablicy. Użyj "reduce".`;
       // 👇
 
       // ☝️
@@ -140,7 +150,8 @@ describe('Ćwiczenie 10', () => {
       expect(map([], x => 2 + x)).toEqual([]);
     });
 
-    it(`Napisz funkcję "cssPropToJs", która zamieni nazwy własności CSS na camelCase`, () => {
+    it('11', () => {
+      `Napisz funkcję "cssPropToJs", która zamieni nazwy własności CSS na camelCase`;
       // 👇
 
       // ☝️
@@ -150,7 +161,8 @@ describe('Ćwiczenie 10', () => {
       expect(cssPropToJs('list-style-type')).toEqual('listStyleType');
     });
 
-    it(`Posortuj tablicę użytkowników po ID`, () => {
+    it('12', () => {
+      `Posortuj tablicę użytkowników po ID`;
       const users = [
         { id: 2, name: 'Michał' },
         { id: 1, name: 'Janek' },
@@ -168,7 +180,8 @@ describe('Ćwiczenie 10', () => {
       ]);
     });
 
-    it(`Napisz funkcję "getMedian", która zwraca medianę wartości podanych w tablicy`, () => {
+    it('13', () => {
+      `Napisz funkcję "getMedian", która zwraca medianę wartości podanych w tablicy`;
       // 👇
 
       // ☝️
@@ -180,7 +193,8 @@ describe('Ćwiczenie 10', () => {
       expect(getMedian([1, 2, 3, 4, 5])).toEqual(3);
     });
 
-    it(`Napisz funkcję "unique", która zwraca tablicę bez powtarzających się wartości.`, () => {
+    it('14', () => {
+      `Napisz funkcję "unique", która zwraca tablicę bez powtarzających się wartości.`;
       // 👇
       function unique(arr) {
         return arr.filter((el, idx, arr) => arr.indexOf(el) === idx);

@@ -1,24 +1,25 @@
 describe('Ćwiczenie 15 - asynchroniczność', () => {
   describe('Typowy przepływ informacji w appce', () => {
-    /**
-     * Wszystkie poniższe zadania rozwiązują ten sam problem na różne sposoby:
-     * 1. Callback
-     * 2. Thunk
-     * 3. Promise
-     * 4. Promise + reduce
-     * 5. async/await
-     *
-     * Zadanie:
-     * Na stronie chcesz wyświetlić wiele części artykułu.
-     * Twoje API zwraca części pojedyńczo, a więc musisz wykonać kilka żądań, aby pobrać je wszystkie.
-     * Zadanie polega na tym, aby pobrać części artykułu i wyświetlić je w *odpowiedniej kolejności*.
-     * Uwagi:
-     * - Wyświetlenie sprowadza się na razie tylko do wywołania funkcji "render"
-     * - Dane otrzymasz w odpowiedni sposób, w zależności od zadania, w przygotowanej przez nas funkcji "getJSON"
-     * - Twoje zadanie polega na wywołaniu "render" z właściwymi danymi we właściwej kolejności
-     * - Na koniec wywołaj "done()"
-     * - Nie ma znaczenia, czy będziesz renderować częście w momencie, gdy przyjdą z API, czy dopiero wszystko na sam koniec. Liczy się rezultat po wywołaniu "done()"
-     */
+    `
+    Wszystkie poniższe zadania rozwiązują ten sam problem na różne sposoby:
+    1. Callback
+    2. Thunk
+    3. Promise
+    4. Promise + reduce
+    5. async/await
+
+    Zadanie:
+    Na stronie chcesz wyświetlić wiele części artykułu.
+    Twoje API zwraca części pojedyńczo, a więc musisz wykonać kilka żądań, aby pobrać je wszystkie.
+    Zadanie polega na tym, aby pobrać części artykułu i wyświetlić je w *odpowiedniej kolejności*.
+
+    Uwagi:
+    - Wyświetlenie sprowadza się na razie tylko do wywołania funkcji "render"
+    - Dane otrzymasz w odpowiedni sposób, w zależności od zadania, w przygotowanej przez nas funkcji "getJSON"
+    - Twoje zadanie polega na wywołaniu "render" z właściwymi danymi we właściwej kolejności
+    - Na koniec wywołaj "done()"
+    - Nie ma znaczenia, czy będziesz renderować częście w momencie, gdy przyjdą z API, czy dopiero wszystko na sam koniec. Liczy się rezultat po wywołaniu "done()"
+    `;
 
     const secretData = require('./15.data.json');
 
@@ -44,7 +45,7 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
           cb(secretData[id]);
         }, delayMs);
       }
-      it(`Używając callbacków`, done => {
+      it('Używając callbacków', done => {
         // 👇
 
         // ☝️
@@ -73,7 +74,7 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
           }
         };
       }
-      it(`Używając thunków`, done => {
+      it('Używając thunków', done => {
         // 👇
 
         // ☝️
@@ -89,7 +90,7 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
           }, delayMs);
         });
       }
-      it(`Używając promisów`, done => {
+      it('Używając promisów', done => {
         // 👇
 
         // ☝️
@@ -105,7 +106,7 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
           }, delayMs);
         });
       }
-      it(`Używając promisów + reduce`, done => {
+      it('Używając promisów + reduce', done => {
         // 👇
 
         // ☝️
@@ -122,7 +123,7 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
         });
       }
 
-      it(`Używając async/await`, async (done) => {
+      it('Używając async/await', async done => {
         // 👇
 
         // ☝️

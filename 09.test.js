@@ -1,5 +1,6 @@
 describe('Ćwiczenie 9', () => {
-  it(`Napisz funkcję "isAdult", która przyjmuje wiek jako argument i zwraca informację o tym, czy ktoś jest pełnoletni`, () => {
+  it('1', () => {
+    `Napisz funkcję "isAdult", która przyjmuje wiek jako argument i zwraca informację o tym, czy ktoś jest pełnoletni`;
     // 👇
 
     // ☝️
@@ -10,7 +11,8 @@ describe('Ćwiczenie 9', () => {
     expect(isAdult(2222)).toBe(true);
   });
 
-  it(`Napisz funkcję "max", która zwraca większą z dwóch liczb`, () => {
+  it('2', () => {
+    `Napisz funkcję "max", która zwraca większą z dwóch liczb`;
     // 👇
 
     // ☝️
@@ -20,8 +22,11 @@ describe('Ćwiczenie 9', () => {
     expect(max(2, -100)).toBe(2);
   });
 
-  it(`Napisz funkcję "isPrimary", która zwróci informację, czy podana liczba jest pierwsza
-  (Sprawdź, czy liczba jest niepodzielna przez wszystkie liczby mniejsze od siebie i większe od 1)`, () => {
+  it('3', () => {
+    `
+    Napisz funkcję "isPrimary", która zwróci informację, czy podana liczba jest pierwsza
+    (Sprawdź, czy liczba jest niepodzielna przez wszystkie liczby mniejsze od siebie i większe od 1)
+    `;
     // 👇
 
     // ☝️
@@ -39,13 +44,14 @@ describe('Ćwiczenie 9', () => {
     expect(isPrimary(11)).toBe(true);
   });
 
-  it(`
+  it('4', () => {
+    `
     Napisz funkcję "userFactory"
     - jako argument przyjmie rolę użytkownika: "admin", "manager" itp.
     - userFactory ma zwrócić funkcję
     - zwrócona funkcja jako argument ma przyjąć imię użytkownika
     - i wyświetlić przez console.log: rolę, imię oraz liczbę stworzonych użytkowników o danej roli
-  `, () => {
+    `;
     spyOn(console, 'log');
 
     // 👇

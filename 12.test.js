@@ -1,5 +1,6 @@
 describe('Ćwiczenie 12', () => {
-  it(`Napisz funkcję "getTail", która przyjmuje tablicę i zwraca wszystkie elementy oprócz pierwszego. Użyj destrukturyzacji.`, () => {
+  it('1', () => {
+    `Napisz funkcję "getTail", która przyjmuje tablicę i zwraca wszystkie elementy oprócz pierwszego. Użyj destrukturyzacji.`;
     // 👇
 
     // ☝️
@@ -9,7 +10,8 @@ describe('Ćwiczenie 12', () => {
     expect(getTail([1, 2, 3, 'abc'])).toEqual([2, 3, 'abc']);
   });
 
-  it(`Napisz funkcję "swap", która zwraca nową tablicę z dwoma elementami zamienionymi miejscami. Użyj destrukturyzacji.`, () => {
+  it('2', () => {
+    `Napisz funkcję "swap", która zwraca nową tablicę z dwoma elementami zamienionymi miejscami. Użyj destrukturyzacji.`;
     // 👇
 
     // ☝️
@@ -18,7 +20,8 @@ describe('Ćwiczenie 12', () => {
     expect(swap(['abc', 42])).toEqual([42, 'abc']);
   });
 
-  it(`Napisz funkcję "sanitizeUser", która zwraca obiekt usera bez wrażliwych danych. Dane wrażliwe to pola "password" i "email". Użyj destrukturyzacji.`, () => {
+  it('3', () => {
+    `Napisz funkcję "sanitizeUser", która zwraca obiekt usera bez wrażliwych danych. Dane wrażliwe to pola "password" i "email". Użyj destrukturyzacji.`;
     // 👇
 
     // ☝️
@@ -27,7 +30,8 @@ describe('Ćwiczenie 12', () => {
     expect(sanitizeUser({ name: 'Ania', password: 'qwerty', email: 'ania@typeofweb.com' })).toEqual({ name: 'Ania' });
   });
 
-  it(`W pętli "for…of" wywołaj funkcję "render" na "id" użytkowników. Użyj destrukturyzacji.`, () => {
+  it('4', () => {
+    `W pętli "for…of" wywołaj funkcję "render" na "id" użytkowników. Użyj destrukturyzacji.`;
     const render = jest.fn();
     const users = [{ id: 1 }, { id: 42 }];
 
@@ -40,11 +44,12 @@ describe('Ćwiczenie 12', () => {
     expect(render).toHaveBeenNthCalledWith(2, 42);
   });
 
-  it(`Popraw funkcję tak, aby nie było błędow. Użyj wartości domyślnej w destrukturyzacji.`, () => {
+  it('5', () => {
+  `Popraw funkcję tak, aby nie było błędow. Użyj wartości domyślnej w destrukturyzacji.`;
     // 👇
     function solution({ x }) { }
     // ☝️
 
     expect(() => solution()).not.toThrowError();
-  })
+  });
 });

@@ -1,5 +1,6 @@
 describe('Ćwiczenie 11', () => {
-  it(`Napisz funkcję "isEmpty", która zwróci informację, czy obiekt jest pusty`, () => {
+  it('1', () => {
+    `Napisz funkcję "isEmpty", która zwróci informację, czy obiekt jest pusty`;
     // 👇
 
     // ☝️
@@ -12,7 +13,8 @@ describe('Ćwiczenie 11', () => {
     expect(isEmpty({ [Symbol('test')]: 1 })).toEqual(true);
   });
 
-  it(`Napisz funkcję "sumValues", która zsumuje wartości obiektu`, () => {
+  it('2', () => {
+    `Napisz funkcję "sumValues", która zsumuje wartości obiektu`;
     // 👇
 
     // ☝️
@@ -23,7 +25,8 @@ describe('Ćwiczenie 11', () => {
     expect(sumValues({ a: -10, b: 42 })).toEqual(32);
   });
 
-  it(`Napisz funkcję "countByAge", która zliczy liczbę osób o poszczególnym wieku`, () => {
+  it('3', () => {
+    `Napisz funkcję "countByAge", która zliczy liczbę osób o poszczególnym wieku`;
     // 👇
 
     // ☝️
@@ -34,7 +37,8 @@ describe('Ćwiczenie 11', () => {
     expect(countByAge([{ age: 13 }, { age: 22 }, { age: 13 }, { age: 13 }, { age: 22 }, { age: 25 }])).toEqual({ 13: 3, 22: 1, 22: 2, 25: 1 });
   });
 
-  it(`Używając "map" i "reduce" napisz funkcję "mapApiUsers", która zamieni podaną tablicę na oczekiany rezultat`, () => {
+  it('4', () => {
+    `Używając "map" i "reduce" napisz funkcję "mapApiUsers", która zamieni podaną tablicę na oczekiany rezultat`;
     // 👇
 
     // ☝️
