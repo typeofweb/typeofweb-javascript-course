@@ -1,6 +1,10 @@
 describe('Ćwiczenie 9', () => {
   it('1', () => {
-    `Napisz funkcję "isAdult", która przyjmuje wiek jako argument i zwraca informację o tym, czy ktoś jest pełnoletni`;
+    `
+    Napisz funkcję "isAdult", która przyjmuje wiek jako
+    argument i zwraca informację o tym, czy ktoś jest
+    pełnoletni
+    `;
     // 👇
 
     // ☝️
@@ -24,8 +28,10 @@ describe('Ćwiczenie 9', () => {
 
   it('3', () => {
     `
-    Napisz funkcję "isPrimary", która zwróci informację, czy podana liczba jest pierwsza
-    (Sprawdź, czy liczba jest niepodzielna przez wszystkie liczby mniejsze od siebie i większe od 1)
+    Napisz funkcję "isPrimary", która zwróci informację,
+    czy podana liczba jest pierwsza
+    (Sprawdź, czy liczba jest niepodzielna przez wszystkie
+      liczby mniejsze od siebie i większe od 1)
     `;
     // 👇
 
@@ -47,10 +53,13 @@ describe('Ćwiczenie 9', () => {
   it('4', () => {
     `
     Napisz funkcję "userFactory"
-    - jako argument przyjmie rolę użytkownika: "admin", "manager" itp.
+    - jako argument przyjmie rolę użytkownika: "admin",
+      "manager" itp.
     - userFactory ma zwrócić funkcję
-    - zwrócona funkcja jako argument ma przyjąć imię użytkownika
-    - i wyświetlić przez console.log: rolę, imię oraz liczbę stworzonych użytkowników o danej roli
+    - zwrócona funkcja jako argument ma przyjąć imię
+      użytkownika
+    - i wyświetlić przez console.log: rolę, imię oraz
+      liczbę stworzonych użytkowników o danej roli
     `;
     spyOn(console, 'log');
 
@@ -58,26 +67,50 @@ describe('Ćwiczenie 9', () => {
 
     // ☝️
 
-    const createAdmin = userFactory("admin");
-    const createUser = userFactory("user");
-    const createManager = userFactory("manager");
+    const createAdmin = userFactory('admin');
+    const createUser = userFactory('user');
+    const createManager = userFactory('manager');
 
-    createAdmin("Michał");
-    expect(console.log).toHaveBeenLastCalledWith("admin", "Michał", 1);
+    createAdmin('Michał');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'admin',
+      'Michał',
+      1,
+    );
 
-    createManager("Martyna");
-    expect(console.log).toHaveBeenLastCalledWith("manager", "Martyna", 1);
+    createManager('Martyna');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'manager',
+      'Martyna',
+      1,
+    );
 
-    createUser("Marcin");
-    expect(console.log).toHaveBeenLastCalledWith("user", "Marcin", 1);
+    createUser('Marcin');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'user',
+      'Marcin',
+      1,
+    );
 
-    createAdmin("Wojtek");
-    expect(console.log).toHaveBeenLastCalledWith("admin", "Wojtek", 2);
+    createAdmin('Wojtek');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'admin',
+      'Wojtek',
+      2,
+    );
 
-    createAdmin("Karolina");
-    expect(console.log).toHaveBeenLastCalledWith("admin", "Karolina", 3);
+    createAdmin('Karolina');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'admin',
+      'Karolina',
+      3,
+    );
 
-    createAdmin("Asia");
-    expect(console.log).toHaveBeenLastCalledWith("admin", "Asia", 4);
+    createAdmin('Asia');
+    expect(console.log).toHaveBeenLastCalledWith(
+      'admin',
+      'Asia',
+      4,
+    );
   });
 });

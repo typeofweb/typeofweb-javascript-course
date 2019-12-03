@@ -1,7 +1,8 @@
 describe('Ćwiczenie 15 - asynchroniczność', () => {
   describe('Typowy przepływ informacji w appce', () => {
     `
-    Wszystkie poniższe zadania rozwiązują ten sam problem na różne sposoby:
+    Wszystkie poniższe zadania rozwiązują ten sam problem
+    na różne sposoby:
     1. Callback
     2. Thunk
     3. Promise
@@ -10,15 +11,22 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
 
     Zadanie:
     Na stronie chcesz wyświetlić wiele części artykułu.
-    Twoje API zwraca części pojedyńczo, a więc musisz wykonać kilka żądań, aby pobrać je wszystkie.
-    Zadanie polega na tym, aby pobrać części artykułu i wyświetlić je w *odpowiedniej kolejności*.
+    Twoje API zwraca części pojedyńczo, a więc musisz
+    wykonać kilka żądań, aby pobrać je wszystkie.
+    Zadanie polega na tym, aby pobrać części artykułu
+    i wyświetlić je w *odpowiedniej kolejności*.
 
     Uwagi:
-    - Wyświetlenie sprowadza się na razie tylko do wywołania funkcji "render"
-    - Dane otrzymasz w odpowiedni sposób, w zależności od zadania, w przygotowanej przez nas funkcji "getJSON"
-    - Twoje zadanie polega na wywołaniu "render" z właściwymi danymi we właściwej kolejności
+    - Wyświetlenie sprowadza się na razie tylko do
+        wywołania funkcji "render"
+    - Dane otrzymasz w odpowiedni sposób, w zależności
+        od zadania, w przygotowanej przez nas funkcji "getJSON"
+    - Twoje zadanie polega na wywołaniu "render"
+        z właściwymi danymi we właściwej kolejności
     - Na koniec wywołaj "done()"
-    - Nie ma znaczenia, czy będziesz renderować częście w momencie, gdy przyjdą z API, czy dopiero wszystko na sam koniec. Liczy się rezultat po wywołaniu "done()"
+    - Nie ma znaczenia, czy będziesz renderować częście
+        w momencie, gdy przyjdą z API, czy dopiero wszystko
+        na sam koniec. Liczy się rezultat po wywołaniu "done()"
     `;
 
     const secretData = require('./15.data.json');
@@ -26,10 +34,22 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
     const render = jest.fn();
     function checkExpectations() {
       expect(render).toHaveBeenCalledTimes(4);
-      expect(render).toHaveBeenNthCalledWith(1, secretData[1]);
-      expect(render).toHaveBeenNthCalledWith(2, secretData[2]);
-      expect(render).toHaveBeenNthCalledWith(3, secretData[3]);
-      expect(render).toHaveBeenNthCalledWith(4, secretData[4]);
+      expect(render).toHaveBeenNthCalledWith(
+        1,
+        secretData[1],
+      );
+      expect(render).toHaveBeenNthCalledWith(
+        2,
+        secretData[2],
+      );
+      expect(render).toHaveBeenNthCalledWith(
+        3,
+        secretData[3],
+      );
+      expect(render).toHaveBeenNthCalledWith(
+        4,
+        secretData[4],
+      );
     }
     const baseDelay = 500;
 
@@ -47,7 +67,6 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
       }
       it('Używając callbacków', done => {
         // 👇
-
         // ☝️
       });
     });
@@ -76,7 +95,6 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
       }
       it('Używając thunków', done => {
         // 👇
-
         // ☝️
       });
     });
@@ -92,7 +110,6 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
       }
       it('Używając promisów', done => {
         // 👇
-
         // ☝️
       });
     });
@@ -108,7 +125,6 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
       }
       it('Używając promisów + reduce', done => {
         // 👇
-
         // ☝️
       });
     });
@@ -125,7 +141,6 @@ describe('Ćwiczenie 15 - asynchroniczność', () => {
 
       it('Używając async/await', async done => {
         // 👇
-
         // ☝️
       });
     });

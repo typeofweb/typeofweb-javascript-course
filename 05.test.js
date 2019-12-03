@@ -13,7 +13,8 @@ describe('Ćwiczenie 5 - Zakresy, hoisting i TDZ', () => {
   it('2', () => {
     `
     Zmień *tylko* sposób deklaracji zmiennej x,
-    aby niemożliwe było odczytanie zmiennej przed jej deklaracją
+    aby niemożliwe było odczytanie zmiennej przed jej
+    deklaracją
     `;
     function solution() {
       console.log(x);

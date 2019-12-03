@@ -1,7 +1,10 @@
 describe('Ćwiczenie 6 - Typy proste', () => {
   describe('number', () => {
     it('1', () => {
-      `Zapisz podane obliczenia tak, aby wynik został obliczony w JS`;
+      `
+      Zapisz podane obliczenia tak, aby wynik został
+      obliczony w JS
+      `;
       // 4 razy 8 dzielone przez 2 dodać 12;
       expect(4 + 8 + 2 + 12).toEqual(28);
     });
@@ -83,7 +86,9 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(solution('blaBladsadsa')).toEqual('BLABLADSADSA');
+      expect(solution('blaBladsadsa')).toEqual(
+        'BLABLADSADSA',
+      );
     });
 
     it('9', () => {
@@ -97,13 +102,16 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(solution('abc')).toEqual('abcabcabcabcabcabcabcabcabcabc');
+      expect(solution('abc')).toEqual(
+        'abcabcabcabcabcabcabcabcabcabc',
+      );
     });
 
     it('10', () => {
       `
-      Przytnij podany tekst do maksymalnej długości i dodaj na końcu elipsę ('...').
-      Zignoruj przypadek, gdy tekst jest krótszy niż maksymalna długość.
+      Przytnij podany tekst do maksymalnej długości i dodaj
+      na końcu elipsę ('...'). Zignoruj przypadek, gdy
+      tekst jest krótszy niż maksymalna długość.
       Użyj slice.
       `;
       const MAX_LENGTH = 10;
@@ -112,10 +120,12 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(solution('Lorem ipsum dolor sit amet')).toEqual('Lorem ipsu...');
-      expect(solution('Sit amet ipsum dolor sit amet')).toEqual(
-        'Sit amet i...',
-      );
+      expect(
+        solution('Lorem ipsum dolor sit amet'),
+      ).toEqual('Lorem ipsu...');
+      expect(
+        solution('Sit amet ipsum dolor sit amet'),
+      ).toEqual('Sit amet i...');
     });
 
     it('11', () => {
@@ -129,7 +139,9 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(solution('witaj, świecie')).toEqual('Witaj, świecie');
+      expect(solution('witaj, świecie')).toEqual(
+        'Witaj, świecie',
+      );
     });
 
     it('12', () => {
@@ -144,10 +156,18 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(isEmailImportant('Szkolenie Staples!')).toEqual(true);
-      expect(isEmailImportant('Śmieszne kotki')).toEqual(false);
-      expect(isEmailImportant('Staples urlop')).toEqual(true);
-      expect(isEmailImportant('Śmieszne pieski')).toEqual(false);
+      expect(
+        isEmailImportant('Szkolenie Staples!'),
+      ).toEqual(true);
+      expect(isEmailImportant('Śmieszne kotki')).toEqual(
+        false,
+      );
+      expect(isEmailImportant('Staples urlop')).toEqual(
+        true,
+      );
+      expect(isEmailImportant('Śmieszne pieski')).toEqual(
+        false,
+      );
     });
 
     it('13', () => {
@@ -162,11 +182,21 @@ describe('Ćwiczenie 6 - Typy proste', () => {
         return solution;
       }
 
-      expect(isEmailImportant('karolina@staples.com')).toEqual(true);
-      expect(isEmailImportant('wojtek@typeofweb.com')).toEqual(false);
-      expect(isEmailImportant('anatol@staples.com')).toEqual(true);
-      expect(isEmailImportant('michal@typeofweb.com')).toEqual(false);
-      expect(isEmailImportant('michal@typeofweb.staples.com')).toEqual(false);
+      expect(
+        isEmailImportant('karolina@staples.com'),
+      ).toEqual(true);
+      expect(
+        isEmailImportant('wojtek@typeofweb.com'),
+      ).toEqual(false);
+      expect(
+        isEmailImportant('anatol@staples.com'),
+      ).toEqual(true);
+      expect(
+        isEmailImportant('michal@typeofweb.com'),
+      ).toEqual(false);
+      expect(
+        isEmailImportant('michal@typeofweb.staples.com'),
+      ).toEqual(false);
     });
   });
 });

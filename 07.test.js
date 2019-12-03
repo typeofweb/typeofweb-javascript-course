@@ -77,7 +77,10 @@ describe('Ćwiczenie 7', () => {
     });
 
     it('8', () => {
-      `Zamień ciąg znaków w systemie binarnym na liczbę w systemie dziesiętnym używając funkcji i metod JS`;
+      `
+      Zamień ciąg znaków w systemie binarnym na liczbę
+      w systemie dziesiętnym używając funkcji i metod JS
+      `;
       const value = '11101';
 
       const answer = value; // 👈

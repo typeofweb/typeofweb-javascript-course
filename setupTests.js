@@ -6,14 +6,19 @@ expect.extend({
    */
   toBeCorrectAnswer(answer, encryptedAnswer) {
     const index = encryptedAnswer
-      ? encryptedAnswer.split('').findIndex(val => /\d/.test(val))
+      ? encryptedAnswer
+          .split('')
+          .findIndex(val => /\d/.test(val))
       : -1;
     const pass = Boolean(
-      encryptedAnswer && answer && encryptedAnswer[index + 1] === answer,
+      encryptedAnswer &&
+        answer &&
+        encryptedAnswer[index + 1] === answer,
     );
     return {
       pass,
-      message: () => 'Nieprawidłowa odpowiedź! Jeszcze raz 👏',
+      message: () =>
+        'Nieprawidłowa odpowiedź! Jeszcze raz 👏',
     };
   },
 });

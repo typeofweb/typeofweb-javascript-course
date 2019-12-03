@@ -1,5 +1,6 @@
 describe('Ćwiczenie 2 - Quiz o podstawach', () => {
-  it('Jakie aplikacje można pisać w JavaScripcie?', () => {
+  it('1', () => {
+    'Jakie aplikacje można pisać w JavaScripcie?';
     const answers = {
       a: 'Przeglądarkowe',
       b: 'Backend',
@@ -12,7 +13,8 @@ describe('Ćwiczenie 2 - Quiz o podstawach', () => {
     expect('').toBeCorrectAnswer('caf2def');
   });
 
-  it('Który silnik JS jest najpopularniejszy?', () => {
+  it('2', () => {
+    'Który silnik JS jest najpopularniejszy?';
     const answers = {
       a: 'SquirrelFish',
       b: 'Chakra',
@@ -23,7 +25,8 @@ describe('Ćwiczenie 2 - Quiz o podstawach', () => {
     expect('').toBeCorrectAnswer('daf5caf');
   });
 
-  it('JavaScript zazwyczaj…', () => {
+  it('3', () => {
+    'JavaScript zazwyczaj…';
     const answers = {
       a: 'Jest kompilowany JIT',
       b: 'Nie jest kompilowany',
@@ -34,7 +37,8 @@ describe('Ćwiczenie 2 - Quiz o podstawach', () => {
     expect('').toBeCorrectAnswer('a7aadec');
   });
 
-  it('Aktualna wersja specyfikacji ES to', () => {
+  it('4', () => {
+    'Aktualna wersja specyfikacji ES to';
     const answers = {
       a: 'ES6',
       b: 'ES2015',
@@ -45,7 +49,8 @@ describe('Ćwiczenie 2 - Quiz o podstawach', () => {
     expect('').toBeCorrectAnswer('6dadfec');
   });
 
-  it('JavaScript najlepiej pisać używając…', () => {
+  it('5', () => {
+    'JavaScript najlepiej pisać używając…';
     const answers = {
       a: 'WebStorm',
       b: 'VSCode',

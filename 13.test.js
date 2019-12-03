@@ -1,6 +1,9 @@
 describe('Ćwiczenie 13', () => {
   it('1', () => {
-    `Zastąp funkcję w prototypie tak, zamiast "hello" wyświetlany był napis "cześć". Nie modyfikuj klasy!`;
+    `
+    Zastąp funkcję w prototypie tak, zamiast "hello"
+    wyświetlany był napis "cześć". Nie modyfikuj klasy!
+    `;
     const spy = spyOn(console, 'log');
 
     class X {
@@ -28,9 +31,11 @@ describe('Ćwiczenie 13', () => {
 
   it('2', () => {
     `
-    Mamy klasę "Player", której instancje posiadają 5 metod: "up", "right", "down", "left" i "log"
+    Mamy klasę "Player", której instancje posiadają 5 metod:
+      "up", "right", "down", "left" i "log"
     Pierwsze cztery odpowiadają za wirtualny ruch postaci.
-    Pozycja gracza jest zapamiętywana i można być zwrócona przy pomocy metody "log".
+    Pozycja gracza jest zapamiętywana i można być zwrócona
+    przy pomocy metody "log".
     Zaimplementuj klasę "Player".
     `;
     // 👇
@@ -41,9 +46,25 @@ describe('Ćwiczenie 13', () => {
 
     expect(player.log()).toEqual({ x: 0, y: 0 });
     expect(player.up().log()).toEqual({ x: 0, y: 1 });
-    expect(player.up().down().log()).toEqual({ x: 0, y: 1 });
-    expect(player.up().up().log()).toEqual({ x: 0, y: 3 });
-    expect(player.up().left().left().log()).toEqual({ x: -2, y: 4 });
+    expect(
+      player
+        .up()
+        .down()
+        .log(),
+    ).toEqual({ x: 0, y: 1 });
+    expect(
+      player
+        .up()
+        .up()
+        .log(),
+    ).toEqual({ x: 0, y: 3 });
+    expect(
+      player
+        .up()
+        .left()
+        .left()
+        .log(),
+    ).toEqual({ x: -2, y: 4 });
     expect(player.right().log()).toEqual({ x: -1, y: 4 });
   });
 });

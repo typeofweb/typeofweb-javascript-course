@@ -3,6 +3,8 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "editor.fontLigatures": false,
+  "editor.rulers": [58],
 
   "jest.autoEnable": true,
   "jest.enableCodeLens": true,
