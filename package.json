@@ -24,7 +24,8 @@
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
-    ]
+    ],
+    "testURL": "http://localhost/"
   },
   "dependencies": {
     "http-server": "0.12.0"
